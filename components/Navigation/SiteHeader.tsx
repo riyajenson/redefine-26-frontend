@@ -95,8 +95,18 @@ export default function SiteHeader({ hideRegisterButton }: { hideRegisterButton?
                 transition={{ duration: 0.2 }}
                 className="cursor-pointer select-none transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="flex aspect-[193/61] w-[175px] items-center justify-center rounded-[19px] bg-black font-[var(--font-bebas-neue)] text-[clamp(1.1rem,2vw,1.65rem)] uppercase leading-none text-[#f7f1f1] shadow-[5px_5px_1px_#fac2cf,0_4px_30px_rgba(255,194,207,0.25)] sm:w-[200px] md:w-[220px] min-[900px]:w-[clamp(7.5rem,14vw,13.125rem)]">
-                  {headerAction.label}
+                <div className="relative aspect-[193/61] w-[175px] sm:w-[200px] md:w-[220px] min-[900px]:w-[clamp(7.5rem,14vw,13.125rem)]">
+                  <Image
+                    src="/redefine-2026/register.svg"
+                    alt=""
+                    fill
+                    priority
+                    aria-hidden="true"
+                    className="pointer-events-none select-none object-contain"
+                  />
+                  <span className="pointer-events-none absolute left-1/2 top-[47%] z-10 flex h-[25%] w-[44%] -translate-x-1/2 -translate-y-1/2 items-center justify-center bg-black font-[var(--font-bebas-neue)] text-[clamp(0.8rem,1.35vw,1.15rem)] uppercase leading-none text-[#f7f1f1]">
+                    {headerAction.label}
+                  </span>
                 </div>
               </motion.div>
             </Link>
